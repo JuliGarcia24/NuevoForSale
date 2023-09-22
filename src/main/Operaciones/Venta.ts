@@ -8,6 +8,6 @@ export class Venta extends Operacion {
     }
 
     public comision(): number {
-        return this.inmuble.precioFinal() * Venta.porcentajeComision;
+        return this.inmueble.precioFinal() * Venta.porcentajeComision;
     }
 }

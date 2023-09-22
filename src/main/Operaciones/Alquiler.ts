@@ -12,6 +12,6 @@ export class Alquiler extends Operacion {
     }
 
     public comision(): number {
-        return (this.cantMeses * this.inmuble.precioFinal()) / 50000;
+        return (this.cantMeses * this.inmueble.precioFinal()) / 50000;
     }
 }

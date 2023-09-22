@@ -3,9 +3,10 @@ import { Empleado } from '../Empleado';
 import { Cliente } from '../Cliente';
 import { Inmueble } from "../Inmuebles/Inmueble";
 import { EstadoOperacion } from './Estados/EstadoOperacion';
+import { Zona } from '../Inmuebles/Zona';
 
 export abstract class Operacion {
-    protected inmuble: Inmueble;
+    protected inmueble: Inmueble;
     private estado: EstadoOperacion;
 
     constructor() {
@@ -14,6 +15,14 @@ export abstract class Operacion {
 
     public setEstado(estado: EstadoOperacion) {
         this.estado = estado;
+    }
+
+    public getEstado(): EstadoOperacion{
+        return this.estado;
+    }
+
+    public getZona(): Zona{
+        return this.inmueble.getZona();
     }
 
     public abstract comision(): number;

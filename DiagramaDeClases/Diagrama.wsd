@@ -1,0 +1,26 @@
+@startuml diagrama
+
+class RankingEmpleados{
+    criterio: CriterioRanking;
+}
+
+interface CriterioRanking{
+    mejorEmpleado(empleados[]): empleado;
+}
+
+
+class CriterioComisiones implements CriterioRanking{
+
+}
+
+
+class CriterioCantOperacionesCerradas implements CriterioRanking{
+    
+}
+
+
+class CriterioCantOperacionesReservadas implements CriterioRanking{
+    
+}
+
+RankingEmpleados -> CriterioRanking
